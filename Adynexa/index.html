@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Adynexa</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar h2 {
+      color: #38bdf8;
+    }
+
+    .navbar a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 50px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero img {
+      width: 100px;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+    }
+
+    .hero p {
+      color: #94a3b8;
+    }
+
+    /* SERVICES */
+    .services {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #334155;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      width: 260px;
+      box-shadow: 0 0 20px rgba(56,189,248,0.2);
+      transition: 0.4s;
+      animation: fadeUp 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 25px rgba(56,189,248,0.6);
+    }
+
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+      transform: scale(1.1);
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      margin-top: 30px;
+      color: #94a3b8;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes float {
+      0%,100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+
+  </style>
+  
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+  <h2>Adynexa</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+  <img src="logo.png">
+  <h1>Adynexa</h1>
+  <p>Next Level Digital Solutions</p>
+</div>
+
+<!-- SERVICES -->
+
+<div class="services">
+
+  <div class="card">
+    <h3>Basic Website</h3>
+    <p>₹499</p>
+    <p>Fast delivery</p>
+    <button onclick="order('Basic Website')">Order Now</button>
+    </div>
+   
+
+
+  <div class="card">
+    <h3>Business Website</h3>
+    <p>₹999</p>
+    <p>Professional design</p>
+     <button onclick="order('Business Website')">Order Now</button>
+  </div>
+
+  <div class="card">
+    <h3>App Development</h3>
+    <p>₹1999+</p>
+    <p>Custom apps</p>
+ <button onclick="order('App Development')">Order Now</button>
+  </div>
+
+</div>
+
+<!-- CONTACT FORM -->
+<div class="contact">
+  <h2>Contact Us</h2>
+
+  <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+  <p>Contact on WhatsApp for instant service 🚀</p>
+</div>
+
+<script>
+function order(service){
+  let number = "919721975343";
+  let message = "Mujhe " + service + " banwani hai";
+  window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message));
+}
+</script>
+
+</body>
+</html>
